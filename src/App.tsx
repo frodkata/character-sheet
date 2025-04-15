@@ -1,58 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import AppRoutes from "./AppRoutes";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+	return (
+		<Router>
+			<div className="App">
+				<header className="App-header">
+					<nav>
+						<ul
+							style={{
+								listStyleType: "none",
+								padding: 0,
+								display: "flex",
+								gap: "10px",
+								color: "black",
+							}}
+						>
+							<li>
+								<Link to="/" style={{ textDecoration: "none" }}>
+									Character
+								</Link>
+							</li>
+							<li>
+								<Link to="/spells" style={{ textDecoration: "none" }}>
+									Spells
+								</Link>
+							</li>
+						</ul>
+					</nav>
+				</header>
+				<main>
+					<AppRoutes />
+				</main>
+			</div>
+		</Router>
+	);
 }
 
 export default App;
