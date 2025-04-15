@@ -1,7 +1,7 @@
 import React from "react";
 
 const styles: React.CSSProperties = {
-	fontSize: "1.2rem",
+	fontSize: "1.5rem",
 	fontWeight: "bold",
 	textAlign: "center",
 	fontFamily: "'Cinzel', serif", // Fantasy-style font
@@ -26,7 +26,7 @@ const styles: React.CSSProperties = {
     )
   `,
 	backgroundColor: "#CC333F", // the main color
-	width: "fit-content",
+	margin: "0 auto", // Center the ribbon horizontally
 } as React.CSSProperties;
 
 interface RibbonTitleProps {
