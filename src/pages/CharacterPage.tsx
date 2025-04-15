@@ -1,6 +1,7 @@
 import React from "react";
 import { CharacterSheet } from "../data/CharacterSheet";
 import backgroundImage from "../assets/papyrus.jpg"; // Adjust the path to match your project structure
+import RibbonTitle from "../components/characterSheet/RibbonTitle";
 
 const styles: { [key: string]: React.CSSProperties } = {
 	body: {
@@ -25,6 +26,10 @@ const styles: { [key: string]: React.CSSProperties } = {
 		padding: "15px",
 		marginBottom: "20px",
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Subtle shadow for depth
+		display: "flex", // Use flexbox
+		justifyContent: "center", // Center horizontally
+		alignItems: "center", // Center vertically
+		flexDirection: "column", // Ensure content stacks vertically
 	},
 	sectionHeading: {
 		color: "#8b0000", // Dark red for section headers
@@ -68,7 +73,9 @@ const CharacterPage: React.FC = () => {
 		<div style={styles.body}>
 			{/* Character Information */}
 			<section style={styles.section}>
-				<h1 style={styles.heading}>{title.name}</h1>
+				<RibbonTitle title={title.name} />
+
+				<h1 style={styles.heading}></h1>
 				<p>
 					<strong>Class:</strong> {title.class} (Level {title.level})
 				</p>
