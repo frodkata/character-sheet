@@ -2,7 +2,7 @@ import React from "react";
 import { CharacterSheet } from "../data/CharacterSheet";
 
 // Define styles as an object
-const styles = {
+const styles: { [key: string]: React.CSSProperties } = {
 	body: {
 		margin: 0,
 		fontFamily: "Arial, sans-serif",

@@ -3,11 +3,12 @@ import { CharacterSheet } from "../data/CharacterSheet";
 import Spell from "../components/Spell";
 
 const SpellsPage: React.FC = () => {
+	const spells = CharacterSheet.spells;
 	return (
 		<div>
 			<h1>Spells</h1>
 			<ul style={{ listStyleType: "none", padding: 0 }}>
-				{CharacterSheet.spells.map((spell, index) => (
+				{spells.map((spell, index) => (
 					<Spell
 						key={index}
 						name={spell.name}

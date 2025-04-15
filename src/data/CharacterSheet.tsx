@@ -192,6 +192,23 @@ export const CharacterSheet: Sheet = {
 					"A broken non-magical wand with runes. Uselesss, but an interesting artefact worth 50gp",
 			},
 		],
+		specialItems: [
+			{
+				itemName:
+					"Mindweaver’s Grimoire (Very Rare, Attunement, Requires Wizard)",
+				itemDescription:
+					"• +2 Spell Save DC for Enchantment & Illusion spells. • Cast Hold Monster once per day without a spell slot. • Copy spells into your spellbook for half the gold & time.",
+			},
+			{
+				itemName: "Bandolier of Arcane Bullets",
+				itemDescription:
+					"The bandolier holds 6 charges. Each charge can be used to imbue a stone or bullet with elemental energy (force, fire, or cold) via the Magic Stone cantrip. Once all charges are used, the bandolier’s magic fades, and it becomes a mundane leather bandolier.",
+			},
+			{
+				itemName: "Waterskin - Filled with [Potion/Elixir of Growth 5] 5/5",
+				itemDescription: "Same effect as Enlarge.",
+			},
+		],
 	},
 	spells: [transformSpellData("Fireball"), transformSpellData("Mage Hand")],
 };

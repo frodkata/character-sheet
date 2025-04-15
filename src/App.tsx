@@ -27,6 +27,11 @@ function App() {
 									Spells
 								</Link>
 							</li>
+							<li>
+								<Link to="/inventory" style={{ textDecoration: "none" }}>
+									Inventory
+								</Link>
+							</li>
 						</ul>
 					</nav>
 				</header>
