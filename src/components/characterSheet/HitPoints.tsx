@@ -1,5 +1,6 @@
 import React from "react";
 import { HitPoints as HitPointsModel } from "../../models/MainSheet";
+
 interface HitPointsProps {
 	hitPoints: HitPointsModel;
 }

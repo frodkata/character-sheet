@@ -1,13 +1,5 @@
 import React from "react";
-
-interface Title {
-	name: string;
-	class: string;
-	level: number;
-	alignment: string;
-	background: string;
-	race: string;
-}
+import { Title } from "../../models/MainSheet";
 
 interface CharacterTitleProps {
 	title: Title;

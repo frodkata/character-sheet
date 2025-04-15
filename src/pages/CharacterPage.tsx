@@ -14,21 +14,31 @@ const styles: { [key: string]: React.CSSProperties } = {
 	container: {
 		display: "flex",
 		flexDirection: "column",
-		alignItems: "center", // Center all child components horizontally
+		alignItems: "center",
 		padding: "20px",
-		backgroundColor: "#f9f9f9", // Fallback background color
-		backgroundImage: `url(${backgroundImage})`, // Add the background image
-		backgroundSize: "cover", // Ensure the image covers the entire page
-		backgroundPosition: "center", // Center the image
-		backgroundRepeat: "no-repeat", // Prevent the image from repeating
-		minHeight: "100vh", // Full-page height
+		backgroundColor: "#f9f9f9",
+		backgroundImage: `url(${backgroundImage})`,
+		backgroundSize: "cover",
+		backgroundPosition: "center",
+		backgroundRepeat: "no-repeat",
+		minHeight: "100vh",
 		boxSizing: "border-box",
 	},
 	ribbonContainer: {
 		display: "flex",
-		justifyContent: "center", // Center the RibbonTitle horizontally
+		justifyContent: "center",
 		width: "100%",
 		marginBottom: "20px",
+	},
+	grid: {
+		display: "grid",
+		gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+		gap: "20px",
+		width: "100%",
+		maxWidth: "1200px",
+	},
+	fullWidth: {
+		gridColumn: "1 / -1",
 	},
 };
 
@@ -48,13 +58,17 @@ const CharacterPage: React.FC = () => {
 			<div style={styles.ribbonContainer}>
 				<RibbonTitle title={title.name} />
 			</div>
-			<CharacterTitle title={title} />
-			<CharacterAttributes attributes={characterAtributes} />
-			<MainStats mainSkills={mainSkills} />
-			<SavingThrows throws={savingThrows} />
-			<HitPoints hitPoints={hitPoints} />
-			<SecondarySkills skills={secondarySkills} />
-			<Proficiencies proficiencies={proficiencies} />
+			<div style={styles.grid}>
+				<div style={styles.fullWidth}>
+					<CharacterTitle title={title} />
+				</div>
+				<CharacterAttributes attributes={characterAtributes} />
+				<MainStats mainSkills={mainSkills} />
+				<SavingThrows throws={savingThrows} />
+				<HitPoints hitPoints={hitPoints} />
+				<SecondarySkills skills={secondarySkills} />
+				<Proficiencies proficiencies={proficiencies} />
+			</div>
 		</div>
 	);
 };
