@@ -3,34 +3,39 @@ import { CharacterSheet } from "../data/CharacterSheet";
 import InventoryItem from "../components/InventoryItem";
 
 const styles: { [key: string]: React.CSSProperties } = {
-	container: {
+	page: {
 		padding: "20px",
-		fontFamily: "'Arial', sans-serif",
-		backgroundColor: "#f4f4f9",
-		borderRadius: "10px",
-		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-		maxWidth: "800px",
-		margin: "20px auto",
+		fontFamily: "'Cinzel', serif", // Fantasy-style font
+		color: "#3e2a1c", // Dark brown text
+		minHeight: "100vh", // Full-page height
+
+		boxSizing: "border-box", // Include padding in width/height calculations
 	},
 	header: {
-		color: "#333",
 		textAlign: "center",
+		color: "#8b0000", // Dark red for a magical feel
+		fontSize: "2.5rem",
+		textShadow: "1px 1px 2px #000", // Subtle shadow for depth
 		marginBottom: "20px",
 	},
 	gold: {
-		color: "#DAA520",
+		color: "#DAA520", // Gold color for the gold amount
 		fontWeight: "bold",
 		fontSize: "1.5rem",
 		textAlign: "center",
 		marginBottom: "20px",
 	},
 	subHeader: {
-		color: "#555",
+		color: "#8b0000", // Dark red for section headers
+		fontSize: "1.2rem",
+		fontWeight: "bold",
 		marginBottom: "10px",
+		textShadow: "0.5px 0.5px 1px #000", // Subtle shadow for depth
 	},
 	list: {
 		listStyleType: "none",
 		padding: 0,
+		margin: 0,
 	},
 };
 
@@ -38,7 +43,7 @@ const InventoryPage: React.FC = () => {
 	const inventory = CharacterSheet.inventory;
 
 	return (
-		<div style={styles.container}>
+		<div style={styles.page}>
 			<h1 style={styles.header}>Inventory</h1>
 			<div style={styles.gold}>💰 Gold: {inventory.gold}</div>
 			<h3 style={styles.subHeader}>Items:</h3>

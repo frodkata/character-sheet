@@ -4,26 +4,46 @@ import { CharacterSheet } from "../data/CharacterSheet";
 // Define styles as an object
 const styles: { [key: string]: React.CSSProperties } = {
 	body: {
-		margin: 0,
-		fontFamily: "Arial, sans-serif",
-		backgroundColor: "#f4f4f4",
-		color: "#333",
+		backgroundColor: "#f4e4c1", // Parchment-like background
+		color: "#3e2a1c", // Dark brown text
+		fontFamily: "'Cinzel', serif", // Fantasy-style font
 		padding: "20px",
+		minHeight: "100vh", // Full-page height
+		boxSizing: "border-box", // Include padding in width/height calculations
 	},
 	heading: {
-		color: "#222",
+		color: "#8b0000", // Dark red for a magical feel
+		fontSize: "2.5rem",
+		textAlign: "center",
+		textShadow: "1px 1px 2px #000", // Subtle shadow for depth
+		marginBottom: "20px",
 	},
 	section: {
-		border: "1px solid #ccc",
-		borderRadius: "8px",
+		backgroundColor: "#fff", // Slightly lighter background for sections
+		border: "2px solid #5a3825", // Dark brown border
+		borderRadius: "12px", // Rounded edges for a polished look
 		padding: "15px",
-		backgroundColor: "#fff",
 		marginBottom: "20px",
-		boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Subtle shadow for depth
+	},
+	sectionHeading: {
+		color: "#8b0000", // Dark red for section headers
+		fontSize: "1.5rem",
+		fontWeight: "bold",
+		marginBottom: "10px",
+		textShadow: "0.5px 0.5px 1px #000", // Subtle shadow for depth
 	},
 	list: {
 		listStyleType: "none",
 		padding: 0,
+		margin: 0,
+	},
+	listItem: {
+		marginBottom: "5px",
+	},
+	statValue: {
+		color: "#DAA520", // Gold color for stat values
+		fontWeight: "bold",
 	},
 };
 
@@ -58,16 +78,18 @@ const CharacterPage: React.FC = () => {
 
 			{/* Main Stats */}
 			<section style={styles.section}>
-				<h2 style={styles.heading}>Main Stats</h2>
+				<h2 style={styles.sectionHeading}>Main Stats</h2>
 				<ul style={styles.list}>
 					{Object.entries(mainSkills).map(([stat, value]) => {
 						if (Array.isArray(value)) {
 							return (
-								<li key={stat}>
+								<li key={stat} style={styles.listItem}>
 									<strong>
 										{stat.charAt(0).toUpperCase() + stat.slice(1)}:
 									</strong>{" "}
-									{value[0]} (Modifier: {value[1]})
+									<span style={styles.statValue}>
+										{value[0]} (Modifier: {value[1]})
+									</span>
 								</li>
 							);
 						}
@@ -78,12 +100,12 @@ const CharacterPage: React.FC = () => {
 
 			{/* Saving Throws */}
 			<section style={styles.section}>
-				<h2 style={styles.heading}>Saving Throws</h2>
+				<h2 style={styles.sectionHeading}>Saving Throws</h2>
 				<ul style={styles.list}>
 					{Object.entries(savingThrows).map(([stat, value]) => (
-						<li key={stat}>
+						<li key={stat} style={styles.listItem}>
 							<strong>{stat.charAt(0).toUpperCase() + stat.slice(1)}:</strong>{" "}
-							{value}
+							<span style={styles.statValue}>{value}</span>
 						</li>
 					))}
 				</ul>
@@ -91,26 +113,29 @@ const CharacterPage: React.FC = () => {
 
 			{/* Hit Points */}
 			<section style={styles.section}>
-				<h2 style={styles.heading}>Hit Points</h2>
+				<h2 style={styles.sectionHeading}>Hit Points</h2>
 				<p>
-					<strong>Current HP:</strong> {hitPoints.currentHitPoints}
+					<strong>Current HP:</strong>{" "}
+					<span style={styles.statValue}>{hitPoints.currentHitPoints}</span>
 				</p>
 				<p>
-					<strong>Max HP:</strong> {hitPoints.maxHitPoints}
+					<strong>Max HP:</strong>{" "}
+					<span style={styles.statValue}>{hitPoints.maxHitPoints}</span>
 				</p>
 				<p>
-					<strong>Hit Dice:</strong> {hitPoints.hitDice}
+					<strong>Hit Dice:</strong>{" "}
+					<span style={styles.statValue}>{hitPoints.hitDice}</span>
 				</p>
 			</section>
 
 			{/* Secondary Skills */}
 			<section style={styles.section}>
-				<h2 style={styles.heading}>Secondary Skills</h2>
+				<h2 style={styles.sectionHeading}>Secondary Skills</h2>
 				<ul style={styles.list}>
 					{Object.entries(secondarySkills).map(([skill, value]) => (
-						<li key={skill}>
+						<li key={skill} style={styles.listItem}>
 							<strong>{skill.charAt(0).toUpperCase() + skill.slice(1)}:</strong>{" "}
-							{value}
+							<span style={styles.statValue}>{value}</span>
 						</li>
 					))}
 				</ul>
@@ -118,17 +143,24 @@ const CharacterPage: React.FC = () => {
 
 			{/* Proficiencies */}
 			<section style={styles.section}>
-				<h2 style={styles.heading}>Proficiencies</h2>
+				<h2 style={styles.sectionHeading}>Proficiencies</h2>
 				<p>
 					<strong>Languages:</strong>{" "}
-					{proficiencies.languageProficiencies.join(", ")}
+					<span style={styles.statValue}>
+						{proficiencies.languageProficiencies.join(", ")}
+					</span>
 				</p>
 				<p>
-					<strong>Tools:</strong> {proficiencies.toolProficiencies.join(", ")}
+					<strong>Tools:</strong>{" "}
+					<span style={styles.statValue}>
+						{proficiencies.toolProficiencies.join(", ")}
+					</span>
 				</p>
 				<p>
 					<strong>Weapons:</strong>{" "}
-					{proficiencies.weaponProficiencies.join(", ")}
+					<span style={styles.statValue}>
+						{proficiencies.weaponProficiencies.join(", ")}
+					</span>
 				</p>
 			</section>
 		</div>
