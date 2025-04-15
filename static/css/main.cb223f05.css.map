@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.cb223f05.css","mappings":"uFAEA,UAEI,QAAS,CADT,SAGJ","sources":["global.css"],"sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap'); /* Import Cinzel font */\n\nhtml, body {\n    padding: 0;\n    margin: 0;\n    \n}"],"names":[],"sourceRoot":""}
