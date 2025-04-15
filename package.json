@@ -2,6 +2,7 @@
 	"name": "character-sheet",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://frodkata.github.io/character-sheet",
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.9.7",
 		"@types/jest": "^27.5.2",
@@ -16,6 +17,8 @@
 		"typescript": "^4.9.5"
 	},
 	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
