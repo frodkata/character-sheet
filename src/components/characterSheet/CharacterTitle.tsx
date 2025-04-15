@@ -11,7 +11,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 		marginBottom: "20px",
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
 		borderRadius: "8px",
-		backgroundColor: "#fff",
+		backgroundColor: "#8b0000", // Dark red for a magical feel
 		display: "flex", // Use flexbox for horizontal alignment
 		justifyContent: "space-around", // Space out the items evenly
 		alignItems: "center", // Align items vertically in the center
@@ -24,7 +24,8 @@ const styles: { [key: string]: React.CSSProperties } = {
 		fontFamily: "'Roboto', sans-serif", // Clean and modern font for details
 	},
 	label: {
-		color: "#8b0000",
+		color: "#f4e4c1", // Parchment-like text color
+		fontFamily: "'Cinzel', serif", // Fantasy-style font
 		fontSize: "1.5rem",
 		fontWeight: "bold",
 		marginBottom: "10px",

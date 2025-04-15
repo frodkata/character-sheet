@@ -2,7 +2,7 @@ import React from "react";
 import { CharacterSheet } from "../data/CharacterSheet";
 import RibbonTitle from "../components/characterSheet/RibbonTitle";
 import CharacterAttributes from "../components/characterSheet/CharacterAttributes";
-import MainStats from "../components/characterSheet/MainSkills";
+import MainSkills from "../components/characterSheet/MainSkills";
 import SavingThrows from "../components/characterSheet/SavingThrows";
 import HitPoints from "../components/characterSheet/HitPoints";
 import SecondarySkills from "../components/characterSheet/SecondarySkills";
@@ -58,12 +58,12 @@ const CharacterPage: React.FC = () => {
 			<div style={styles.ribbonContainer}>
 				<RibbonTitle title={title.name} />
 			</div>
+			<div style={styles.fullWidth}>
+				<CharacterTitle title={title} />
+			</div>
+			<MainSkills mainSkills={mainSkills} />
 			<div style={styles.grid}>
-				<div style={styles.fullWidth}>
-					<CharacterTitle title={title} />
-				</div>
 				<CharacterAttributes attributes={characterAtributes} />
-				<MainStats mainSkills={mainSkills} />
 				<SavingThrows throws={savingThrows} />
 				<HitPoints hitPoints={hitPoints} />
 				<SecondarySkills skills={secondarySkills} />

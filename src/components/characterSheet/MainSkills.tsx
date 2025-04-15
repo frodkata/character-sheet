@@ -1,17 +1,14 @@
 import React from "react";
 import { MainSkills as MainSkillsModel } from "../../models/MainSheet";
+import RibbonSkill from "./RibbonSkill";
 
-interface MainStatsProps {
+interface MainSkillsProps {
 	mainSkills: MainSkillsModel;
 }
 
 const styles: { [key: string]: React.CSSProperties } = {
 	section: {
-		padding: "15px",
 		marginBottom: "20px",
-		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-		borderRadius: "8px",
-		backgroundColor: "#fff",
 	},
 	heading: {
 		color: "#8b0000",
@@ -19,36 +16,30 @@ const styles: { [key: string]: React.CSSProperties } = {
 		fontWeight: "bold",
 		marginBottom: "10px",
 		textShadow: "0.5px 0.5px 1px #000",
+		textAlign: "center",
 	},
-	list: {
-		listStyleType: "none",
-		padding: 0,
-		margin: 0,
-	},
-	listItem: {
-		marginBottom: "5px",
-	},
-	statValue: {
-		color: "#FF4500",
-		fontWeight: "bold",
-		fontSize: "1.2rem",
+	ribbonContainer: {
+		display: "flex", // Arrange RibbonSkill components in a row
+		justifyContent: "space-around", // Space them evenly
+		alignItems: "center", // Align them vertically
+		flexWrap: "wrap", // Allow wrapping on smaller screens
+		gap: "10px", // Add spacing between ribbons
 	},
 };
 
-const MainSkills: React.FC<MainStatsProps> = ({ mainSkills }) => {
+const MainSkills: React.FC<MainSkillsProps> = ({ mainSkills }) => {
 	return (
 		<section style={styles.section}>
-			<h2 style={styles.heading}>Main Skills:</h2>
-			<ul style={styles.list}>
-				{Object.entries(mainSkills).map(([stat, value]) => (
-					<li key={stat} style={styles.listItem}>
-						<strong>
-							{stat.charAt(0).toUpperCase() + stat.slice(1)}: {value[0]}
-						</strong>{" "}
-						<span style={styles.statValue}>({value[1]})</span>
-					</li>
+			<div style={styles.ribbonContainer}>
+				{Object.entries(mainSkills).map(([skill, [base, modifier]]) => (
+					<RibbonSkill
+						key={skill}
+						skill={skill}
+						base={base}
+						modifier={modifier}
+					/>
 				))}
-			</ul>
+			</div>
 		</section>
 	);
 };
