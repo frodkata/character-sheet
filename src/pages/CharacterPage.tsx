@@ -4,7 +4,6 @@ import { CharacterSheet } from "../data/CharacterSheet";
 // Define styles as an object
 const styles: { [key: string]: React.CSSProperties } = {
 	body: {
-		backgroundColor: "#f4e4c1", // Parchment-like background
 		color: "#3e2a1c", // Dark brown text
 		fontFamily: "'Cinzel', serif", // Fantasy-style font
 		padding: "20px",
@@ -19,7 +18,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 		marginBottom: "20px",
 	},
 	section: {
-		backgroundColor: "#fff", // Slightly lighter background for sections
+		backgroundColor: "#f4e4c1", // Parchment-like background
 		border: "2px solid #5a3825", // Dark brown border
 		borderRadius: "12px", // Rounded edges for a polished look
 		padding: "15px",
@@ -42,8 +41,14 @@ const styles: { [key: string]: React.CSSProperties } = {
 		marginBottom: "5px",
 	},
 	statValue: {
-		color: "#DAA520", // Gold color for stat values
+		color: "#FF4500", // Bright orange-red for better visibility
 		fontWeight: "bold",
+		fontSize: "1.2rem", // Slightly larger font size for emphasis
+		backgroundColor: "#fff", // White background for contrast
+		padding: "2px 6px", // Padding to make it stand out
+		borderRadius: "6px", // Rounded edges for a polished look
+		boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow for depth
+		marginLeft: 3, // Space between label and value
 	},
 };
 
@@ -85,11 +90,9 @@ const CharacterPage: React.FC = () => {
 							return (
 								<li key={stat} style={styles.listItem}>
 									<strong>
-										{stat.charAt(0).toUpperCase() + stat.slice(1)}:
-									</strong>{" "}
-									<span style={styles.statValue}>
-										{value[0]} (Modifier: {value[1]})
-									</span>
+										{stat.charAt(0).toUpperCase() + stat.slice(1)}: {value[0]}
+									</strong>
+									<span style={styles.statValue}>({value[1]})</span>
 								</li>
 							);
 						}
@@ -145,22 +148,22 @@ const CharacterPage: React.FC = () => {
 			<section style={styles.section}>
 				<h2 style={styles.sectionHeading}>Proficiencies</h2>
 				<p>
-					<strong>Languages:</strong>{" "}
-					<span style={styles.statValue}>
-						{proficiencies.languageProficiencies.join(", ")}
-					</span>
+					<strong>Languages:</strong>
+					{proficiencies.languageProficiencies.map((item) => {
+						return <span style={styles.statValue}>{item}</span>;
+					})}
 				</p>
 				<p>
-					<strong>Tools:</strong>{" "}
-					<span style={styles.statValue}>
-						{proficiencies.toolProficiencies.join(", ")}
-					</span>
+					<strong>Tools:</strong>
+					{proficiencies.toolProficiencies.map((item) => {
+						return <span style={styles.statValue}>{item}</span>;
+					})}
 				</p>
 				<p>
-					<strong>Weapons:</strong>{" "}
-					<span style={styles.statValue}>
-						{proficiencies.weaponProficiencies.join(", ")}
-					</span>
+					<strong>Weapons:</strong>
+					{proficiencies.weaponProficiencies.map((item) => {
+						return <span style={styles.statValue}>{item}</span>;
+					})}
 				</p>
 			</section>
 		</div>
