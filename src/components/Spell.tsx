@@ -21,18 +21,20 @@ const styles: { [key: string]: React.CSSProperties } = {
 	text: {
 		margin: "5px 0",
 		color: "#3e2a1c",
+		fontFamily: "sans-serif",
 	},
 	levelBadge: {
 		display: "inline-block",
 		padding: "5px 10px",
-		backgroundColor: "#8b0000", // Dark red for a bold look
-		color: "#fff", // White text for contrast
-		borderRadius: "8px", // Rounded edges for a badge-like appearance
+		backgroundColor: "#8b0000",
+		color: "#fff",
+		borderRadius: "8px",
 		fontWeight: "bold",
 		fontSize: "0.9rem",
-		boxShadow: "0 2px 4px rgba(0, 0, 0, 0.3)", // Subtle shadow for depth
+		boxShadow: "0 2px 4px rgba(0, 0, 0, 0.3)",
 	},
 	description: {
+		fontFamily: "sans-serif",
 		margin: "10px 0 0",
 		color: "#3e2a1c",
 		fontSize: "0.95rem",

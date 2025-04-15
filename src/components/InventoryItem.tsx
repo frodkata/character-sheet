@@ -14,18 +14,18 @@ const styles: { [key: string]: React.CSSProperties } = {
 		padding: "10px 15px",
 		marginBottom: "10px",
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Subtle shadow for depth
-		fontFamily: "'Cinzel', serif", // Fantasy-style font
 		color: "#3e2a1c", // Dark brown text
 	},
 	itemName: {
 		fontWeight: "bold",
 		color: "#8b0000", // Dark red for emphasis
 		fontSize: "1.2rem",
+		fontFamily: "'Cinzel', serif", // Fantasy-style font
 	},
 	itemDescription: {
 		color: "#3e2a1c", // Dark brown for consistency
-		fontStyle: "italic",
-		fontSize: "0.95rem",
+		fontSize: "1.00rem",
+		fontFamily: "serif", // Fantasy-style font
 	},
 	quantity: {
 		color: "#DAA520", // Gold color for quantity

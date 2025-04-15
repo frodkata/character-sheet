@@ -1,14 +1,17 @@
 import React from "react";
 import { CharacterSheet } from "../data/CharacterSheet";
+import backgroundImage from "../assets/papyrus.jpg"; // Adjust the path to match your project structure
 
-// Define styles as an object
 const styles: { [key: string]: React.CSSProperties } = {
 	body: {
 		color: "#3e2a1c", // Dark brown text
-		fontFamily: "'Cinzel', serif", // Fantasy-style font
 		padding: "20px",
 		minHeight: "100vh", // Full-page height
 		boxSizing: "border-box", // Include padding in width/height calculations
+		backgroundImage: `url(${backgroundImage})`, // Set the background image
+		backgroundSize: "cover", // Ensure the image covers the entire page
+		backgroundPosition: "center", // Center the image
+		backgroundRepeat: "no-repeat", // Prevent the image from repeating
 	},
 	heading: {
 		color: "#8b0000", // Dark red for a magical feel
@@ -16,11 +19,9 @@ const styles: { [key: string]: React.CSSProperties } = {
 		textAlign: "center",
 		textShadow: "1px 1px 2px #000", // Subtle shadow for depth
 		marginBottom: "20px",
+		fontFamily: "'Cinzel', serif", // Fantasy-style font
 	},
 	section: {
-		backgroundColor: "#f4e4c1", // Parchment-like background
-		border: "2px solid #5a3825", // Dark brown border
-		borderRadius: "12px", // Rounded edges for a polished look
 		padding: "15px",
 		marginBottom: "20px",
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Subtle shadow for depth
@@ -84,7 +85,7 @@ const CharacterPage: React.FC = () => {
 
 			{/* Character Attributes */}
 			<section style={styles.section}>
-				<h2 style={styles.sectionHeading}>Character Atributes</h2>
+				<h2 style={styles.sectionHeading}>Character Attributes</h2>
 				<ul style={styles.list}>
 					{Object.entries(characterAtributes).map(([stat, value]) => (
 						<li key={stat} style={styles.listItem}>
