@@ -34,6 +34,8 @@ export const CharacterSheet: Sheet = {
 		intelligence: [18, 4],
 		wisdom: [12, 1],
 		charisma: [10, 0],
+	},
+	characterAtributes: {
 		inspiration: 1,
 		proficiencyBonus: 3,
 		armorClass: 12,

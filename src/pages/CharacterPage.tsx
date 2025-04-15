@@ -60,6 +60,7 @@ const CharacterPage: React.FC = () => {
 		hitPoints,
 		secondarySkills,
 		proficiencies,
+		characterAtributes,
 	} = CharacterSheet;
 
 	return (
@@ -79,6 +80,19 @@ const CharacterPage: React.FC = () => {
 				<p>
 					<strong>Race:</strong> {title.race}
 				</p>
+			</section>
+
+			{/* Character Attributes */}
+			<section style={styles.section}>
+				<h2 style={styles.sectionHeading}>Character Atributes</h2>
+				<ul style={styles.list}>
+					{Object.entries(characterAtributes).map(([stat, value]) => (
+						<li key={stat} style={styles.listItem}>
+							<strong>{stat.charAt(0).toUpperCase() + stat.slice(1)}:</strong>{" "}
+							<span style={styles.statValue}>{value}</span>
+						</li>
+					))}
+				</ul>
 			</section>
 
 			{/* Main Stats */}

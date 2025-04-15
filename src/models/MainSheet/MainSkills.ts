@@ -6,10 +6,4 @@ export interface MainSkills {
 	intelligence: [number, number];
 	wisdom: [number, number];
 	charisma: [number, number];
-	inspiration: number;
-	proficiencyBonus: number;
-	armorClass: number;
-	initiative: number;
-	speed: number;
-	passiveWisdom: number; // Passive Wisdom (Perception)
 }

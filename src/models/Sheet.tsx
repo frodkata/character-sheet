@@ -1,4 +1,5 @@
 import {
+	CharacterAttributes,
 	HitPoints,
 	MainSkills,
 	Proficiencies,
@@ -15,6 +16,7 @@ export interface Sheet {
 	title: Title;
 	mainSkills: MainSkills;
 	secondarySkills: SecondarySkills;
+	characterAtributes: CharacterAttributes;
 	savingThrows: SavingThrows;
 	hitPoints: HitPoints;
 	proficiencies: Proficiencies;
