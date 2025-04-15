@@ -1,5 +1,5 @@
 import React from "react";
-import { CharacterSheet } from "../CharacterSheet";
+import { CharacterSheet } from "../data/CharacterSheet";
 
 // Define styles as an object
 const styles = {

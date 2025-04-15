@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import CharacterPage from "./components/CharacterPage";
-import SpellsPage from "./components/SpellsPage";
+import CharacterPage from "./pages/CharacterPage";
+import SpellsPage from "./pages/SpellsPage";
 
 const AppRoutes: React.FC = () => {
 	return (

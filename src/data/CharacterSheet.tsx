@@ -1,9 +1,9 @@
-import { Sheet } from "./models/Sheet";
-import { Spell } from "./models/Spells";
-import Spells from "./Spells";
+import { Sheet } from "../models/Sheet";
+import { Spell } from "../models/Spells";
+import AllSpells from "./AllSpells";
 
 export const transformSpellData = (spellName: string): Spell => {
-	const spell = Spells.find((spell) => spell.name === spellName);
+	const spell = AllSpells.find((spell) => spell.name === spellName);
 
 	return {
 		castingTime: spell?.castingTime || "",

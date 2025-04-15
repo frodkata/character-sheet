@@ -1,5 +1,5 @@
 import React from "react";
-import { CharacterSheet } from "../CharacterSheet";
+import { CharacterSheet } from "../data/CharacterSheet";
 import Spell from "../components/Spell";
 
 const SpellsPage: React.FC = () => {
