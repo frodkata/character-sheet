@@ -71,14 +71,14 @@ const CharacterPage: React.FC = () => {
 				<CharacterTitle title={title} />
 			</div>
 			<MainSkills mainSkills={mainSkills} />
+			<CharacterAttributes attributes={characterAtributes} />
 
 			<div style={styles.grid}>
-				<HitPoints hitPoints={hitPoints} />
-				<CharacterAttributes attributes={characterAtributes} />
 				<div style={styles.leftColumn}>
 					<SecondarySkills skills={secondarySkills} />
 				</div>
 				<div style={styles.rightColumn}>
+					<HitPoints hitPoints={hitPoints} />
 					<SavingThrows throws={savingThrows} />
 				</div>
 				<div style={styles.proficiencies}>

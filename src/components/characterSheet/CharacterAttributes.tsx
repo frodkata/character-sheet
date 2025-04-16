@@ -7,10 +7,6 @@ interface CharacterAttributesProps {
 
 const styles: { [key: string]: React.CSSProperties } = {
 	container: {
-		display: "flex",
-		flexDirection: "column",
-		alignItems: "center",
-		gap: "10px", // Add spacing between items
 		padding: "15px",
 	},
 	listItem: {
@@ -25,6 +21,11 @@ const styles: { [key: string]: React.CSSProperties } = {
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Add shadow for depth
 		width: "100%", // Ensure the item takes full width
 		maxWidth: "300px", // Limit the width for better appearance
+		display: "flex",
+		flexDirection: "row",
+		alignContent: "center",
+		alignItems: "center",
+		justifyContent: "space-between",
 	},
 	statName: {
 		marginBottom: "5px",
@@ -33,6 +34,9 @@ const styles: { [key: string]: React.CSSProperties } = {
 		color: "#FFD700", // Gold color for the value
 		fontWeight: "bold",
 		fontSize: "1.2rem",
+		backgroundColor: "#222222",
+		padding: 5,
+		width: "10%",
 	},
 };
 
@@ -49,34 +53,44 @@ const CharacterAttributes: React.FC<CharacterAttributesProps> = ({
 	} = attributes;
 	return (
 		<div style={styles.container}>
-			<div style={styles.listItem}>
-				<div style={styles.statName}>Armor Class</div>
-				<div style={styles.statValue}>{armorClass}</div>
-			</div>
+			<div
+				style={{
+					flexDirection: "row",
+					display: "flex",
+					justifyContent: "space-around",
+					flexWrap: "wrap",
+					gap: "10px", // Add spacing between items
+				}}
+			>
+				<div style={styles.listItem}>
+					<div style={styles.statName}>Armor Class</div>
+					<div style={styles.statValue}>{armorClass}</div>
+				</div>
 
-			<div style={styles.listItem}>
-				<div style={styles.statName}>Initiative</div>
-				<div style={styles.statValue}>{initiative}</div>
-			</div>
+				<div style={styles.listItem}>
+					<div style={styles.statName}>Initiative</div>
+					<div style={styles.statValue}>{initiative}</div>
+				</div>
 
-			<div style={styles.listItem}>
-				<div style={styles.statName}>Inspiration</div>
-				<div style={styles.statValue}>{inspiration}</div>
-			</div>
+				<div style={styles.listItem}>
+					<div style={styles.statName}>Inspiration</div>
+					<div style={styles.statValue}>{inspiration}</div>
+				</div>
 
-			<div style={styles.listItem}>
-				<div style={styles.statName}>Passive Wisdom</div>
-				<div style={styles.statValue}>{passiveWisdom}</div>
-			</div>
+				<div style={styles.listItem}>
+					<div style={styles.statName}>Passive Wisdom</div>
+					<div style={styles.statValue}>{passiveWisdom}</div>
+				</div>
 
-			<div style={styles.listItem}>
-				<div style={styles.statName}>Proficiency Bonus</div>
-				<div style={styles.statValue}>{proficiencyBonus}</div>
-			</div>
+				<div style={styles.listItem}>
+					<div style={styles.statName}>Proficiency Bonus</div>
+					<div style={styles.statValue}>{proficiencyBonus}</div>
+				</div>
 
-			<div style={styles.listItem}>
-				<div style={styles.statName}>Speed</div>
-				<div style={styles.statValue}>{speed}</div>
+				<div style={styles.listItem}>
+					<div style={styles.statName}>Speed</div>
+					<div style={styles.statValue}>{speed}</div>
+				</div>
 			</div>
 		</div>
 	);
