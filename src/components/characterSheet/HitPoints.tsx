@@ -1,5 +1,6 @@
 import React from "react";
 import { HitPoints as HitPointsModel } from "../../models/MainSheet";
+import HealthPotionIcon from "../svg components/HealthPotionIcon";
 
 interface HitPointsProps {
 	hitPoints: HitPointsModel;
@@ -10,7 +11,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 		padding: "15px",
 		marginBottom: "5px",
 		textAlign: "center",
-		color: "#8b0000", // Parchment-like text color
+		color: "#8b0000",
 		fontFamily: "'Cinzel', serif", // Fantasy-style font
 		fontSize: "1.2rem",
 		fontWeight: "bold",
@@ -28,15 +29,19 @@ const HitPoints: React.FC<HitPointsProps> = ({ hitPoints }) => {
 	return (
 		<section style={styles.section}>
 			<p>
-				<strong>Current HP:</strong>{" "}
-				<span style={styles.statValue}>{hitPoints.currentHitPoints} ❤️ </span>
+				<strong>Current HP:</strong>
+				<span style={styles.statValue}>
+					{hitPoints.currentHitPoints} <HealthPotionIcon fill="#8b0000" />
+				</span>
 			</p>
 			<p>
-				<strong>Max HP:</strong>{" "}
-				<span style={styles.statValue}>{hitPoints.maxHitPoints} ❤️ </span>
+				<strong>Max HP:</strong>
+				<span style={styles.statValue}>
+					{hitPoints.maxHitPoints} <HealthPotionIcon fill="#8b0000" />{" "}
+				</span>
 			</p>
 			<p>
-				<strong>Hit Dice:</strong>{" "}
+				<strong>Hit Dice:</strong>
 				<span style={styles.statValue}>{hitPoints.hitDice}</span>
 			</p>
 		</section>
