@@ -26,7 +26,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 		margin: 0,
 	},
 	listItem: {
-		color: "#f4e4c1", // Parchment-like text color
+		color: "#f4e4c1",
 		marginBottom: "5px",
 	},
 	statValue: {
