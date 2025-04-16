@@ -7,16 +7,18 @@ interface SecondarySkillsProps {
 
 const styles: { [key: string]: React.CSSProperties } = {
 	section: {
+		backgroundColor: "#222222",
 		padding: "15px",
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
 		borderRadius: "8px",
 	},
 	heading: {
-		color: "#8b0000",
+		color: "#FF4500",
 		fontSize: "1.5rem",
 		fontWeight: "bold",
 		marginBottom: "10px",
 		textShadow: "0.5px 0.5px 1px #000",
+		textAlign: "center",
 	},
 	list: {
 		listStyleType: "none",
@@ -24,6 +26,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 		margin: 0,
 	},
 	listItem: {
+		color: "#f4e4c1", // Parchment-like text color
 		marginBottom: "5px",
 	},
 	statValue: {
