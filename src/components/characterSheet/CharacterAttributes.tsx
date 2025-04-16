@@ -6,23 +6,31 @@ interface CharacterAttributesProps {
 }
 
 const styles: { [key: string]: React.CSSProperties } = {
-	section: {
+	container: {
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		gap: "10px", // Add spacing between items
 		padding: "15px",
-		textAlign: "center",
-		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-		borderRadius: "8px",
-		backgroundColor: "#fff",
-	},
-	list: {
-		listStyleType: "none",
-		padding: 0,
-		margin: 0,
 	},
 	listItem: {
+		padding: "10px 20px", // Add padding inside the item
+		backgroundColor: "#8b0000", // Dark red for a magical feel
+		color: "#f4e4c1", // Parchment-like text color
+		fontWeight: "bold",
+		fontSize: "1rem",
+		fontFamily: "'Cinzel', serif", // Fantasy-style font
+		textAlign: "center",
+		borderRadius: "8px", // Rounded corners for a polished look
+		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Add shadow for depth
+		width: "100%", // Ensure the item takes full width
+		maxWidth: "300px", // Limit the width for better appearance
+	},
+	statName: {
 		marginBottom: "5px",
 	},
 	statValue: {
-		color: "#FF4500",
+		color: "#FFD700", // Gold color for the value
 		fontWeight: "bold",
 		fontSize: "1.2rem",
 	},
@@ -31,17 +39,46 @@ const styles: { [key: string]: React.CSSProperties } = {
 const CharacterAttributes: React.FC<CharacterAttributesProps> = ({
 	attributes,
 }) => {
+	const {
+		armorClass,
+		initiative,
+		inspiration,
+		passiveWisdom,
+		proficiencyBonus,
+		speed,
+	} = attributes;
 	return (
-		<section style={styles.section}>
-			<ul style={styles.list}>
-				{Object.entries(attributes).map(([stat, value]) => (
-					<li key={stat} style={styles.listItem}>
-						<strong>{stat.charAt(0).toUpperCase() + stat.slice(1)}:</strong>{" "}
-						<span style={styles.statValue}>{value}</span>
-					</li>
-				))}
-			</ul>
-		</section>
+		<div style={styles.container}>
+			<div style={styles.listItem}>
+				<div style={styles.statName}>Armor Class</div>
+				<div style={styles.statValue}>{armorClass}</div>
+			</div>
+
+			<div style={styles.listItem}>
+				<div style={styles.statName}>Initiative</div>
+				<div style={styles.statValue}>{initiative}</div>
+			</div>
+
+			<div style={styles.listItem}>
+				<div style={styles.statName}>Inspiration</div>
+				<div style={styles.statValue}>{inspiration}</div>
+			</div>
+
+			<div style={styles.listItem}>
+				<div style={styles.statName}>Passive Wisdom</div>
+				<div style={styles.statValue}>{passiveWisdom}</div>
+			</div>
+
+			<div style={styles.listItem}>
+				<div style={styles.statName}>Proficiency Bonus</div>
+				<div style={styles.statValue}>{proficiencyBonus}</div>
+			</div>
+
+			<div style={styles.listItem}>
+				<div style={styles.statName}>Speed</div>
+				<div style={styles.statValue}>{speed}</div>
+			</div>
+		</div>
 	);
 };
 
