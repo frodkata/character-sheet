@@ -8,10 +8,9 @@ interface ProficienciesProps {
 const styles: { [key: string]: React.CSSProperties } = {
 	section: {
 		padding: "15px",
-
 		display: "flex",
 		flexDirection: "column",
-		gap: "10px",
+		gap: "2px",
 	},
 	category: {
 		display: "flex",
@@ -34,7 +33,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 		color: "#8b0000",
 		fontSize: "1.2rem",
 		fontWeight: "bold",
-		marginBottom: "5px",
+		marginBottom: "1px",
 		textShadow: "0.5px 0.5px 1px #000",
 	},
 };

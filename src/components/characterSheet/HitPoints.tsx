@@ -8,7 +8,7 @@ interface HitPointsProps {
 const styles: { [key: string]: React.CSSProperties } = {
 	section: {
 		padding: "15px",
-		marginBottom: "20px",
+		marginBottom: "5px",
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
 		borderRadius: "8px",
 		backgroundColor: "#fff",
@@ -30,7 +30,6 @@ const styles: { [key: string]: React.CSSProperties } = {
 const HitPoints: React.FC<HitPointsProps> = ({ hitPoints }) => {
 	return (
 		<section style={styles.section}>
-			<h2 style={styles.heading}>Hit Points</h2>
 			<p>
 				<strong>Current HP:</strong>{" "}
 				<span style={styles.statValue}>{hitPoints.currentHitPoints}</span>
