@@ -10,7 +10,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 		padding: "15px",
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
 		borderRadius: "8px",
-		backgroundColor: "#fff",
+		textAlign: "right",
 	},
 	heading: {
 		color: "#8b0000",

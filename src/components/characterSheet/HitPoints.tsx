@@ -9,21 +9,18 @@ const styles: { [key: string]: React.CSSProperties } = {
 	section: {
 		padding: "15px",
 		marginBottom: "5px",
-		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-		borderRadius: "8px",
-		backgroundColor: "#fff",
-	},
-	heading: {
-		color: "#8b0000",
-		fontSize: "1.5rem",
+		textAlign: "center",
+		color: "#8b0000", // Parchment-like text color
+		fontFamily: "'Cinzel', serif", // Fantasy-style font
+		fontSize: "1.2rem",
 		fontWeight: "bold",
-		marginBottom: "10px",
-		textShadow: "0.5px 0.5px 1px #000",
+		textShadow: "1px 1px 2px #000", // Subtle shadow for readability
 	},
 	statValue: {
-		color: "#FF4500",
+		color: "#8b0000",
 		fontWeight: "bold",
 		fontSize: "1.2rem",
+		fontFamily: "'Cinzel', serif", // Fantasy-style font
 	},
 };
 
@@ -32,11 +29,11 @@ const HitPoints: React.FC<HitPointsProps> = ({ hitPoints }) => {
 		<section style={styles.section}>
 			<p>
 				<strong>Current HP:</strong>{" "}
-				<span style={styles.statValue}>{hitPoints.currentHitPoints}</span>
+				<span style={styles.statValue}>{hitPoints.currentHitPoints} ❤️ </span>
 			</p>
 			<p>
 				<strong>Max HP:</strong>{" "}
-				<span style={styles.statValue}>{hitPoints.maxHitPoints}</span>
+				<span style={styles.statValue}>{hitPoints.maxHitPoints} ❤️ </span>
 			</p>
 			<p>
 				<strong>Hit Dice:</strong>{" "}

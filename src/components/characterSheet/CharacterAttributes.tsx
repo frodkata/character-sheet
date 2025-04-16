@@ -8,7 +8,7 @@ interface CharacterAttributesProps {
 const styles: { [key: string]: React.CSSProperties } = {
 	section: {
 		padding: "15px",
-
+		textAlign: "center",
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
 		borderRadius: "8px",
 		backgroundColor: "#fff",
