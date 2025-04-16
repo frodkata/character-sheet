@@ -17,12 +17,9 @@ const styles: { [key: string]: React.CSSProperties } = {
 		alignItems: "center",
 		padding: "20px",
 		backgroundColor: "#f9f9f9",
-		backgroundImage: `url(${backgroundImage})`,
-		backgroundSize: "cover",
-		backgroundPosition: "center",
-		backgroundRepeat: "no-repeat",
 		minHeight: "100vh",
 		boxSizing: "border-box",
+		backgroundImage: `url(${backgroundImage})`, // Add your background image path
 	},
 	ribbonContainer: {
 		display: "flex",
@@ -39,6 +36,9 @@ const styles: { [key: string]: React.CSSProperties } = {
 	},
 	fullWidth: {
 		gridColumn: "1 / -1",
+	},
+	proficiencies: {
+		gridColumn: "1 / -1", // Span the entire width of the grid
 	},
 };
 
@@ -67,7 +67,9 @@ const CharacterPage: React.FC = () => {
 				<SavingThrows throws={savingThrows} />
 				<HitPoints hitPoints={hitPoints} />
 				<SecondarySkills skills={secondarySkills} />
-				<Proficiencies proficiencies={proficiencies} />
+				<div style={styles.proficiencies}>
+					<Proficiencies proficiencies={proficiencies} />
+				</div>
 			</div>
 		</div>
 	);
