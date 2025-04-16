@@ -42,7 +42,9 @@ const SavingThrows: React.FC<SavingThrowsProps> = ({ throws }) => {
 				{Object.entries(throws).map(([stat, value]) => (
 					<li key={stat} style={styles.listItem}>
 						<strong>{stat.charAt(0).toUpperCase() + stat.slice(1)}:</strong>{" "}
-						<span style={styles.statValue}>{value}</span>
+						<span style={styles.statValue}>
+							{value < 0 ? `${value}` : `+${value}`}
+						</span>
 					</li>
 				))}
 			</ul>

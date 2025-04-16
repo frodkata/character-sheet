@@ -41,7 +41,9 @@ const SecondarySkills: React.FC<SecondarySkillsProps> = ({ skills }) => {
 				{Object.entries(skills).map(([skill, value]) => (
 					<li key={skill} style={styles.listItem}>
 						<strong>{skill.charAt(0).toUpperCase() + skill.slice(1)}:</strong>{" "}
-						<span style={styles.statValue}>{value}</span>
+						<span style={styles.statValue}>
+							{value < 0 ? `${value}` : `+${value}`}
+						</span>
 					</li>
 				))}
 			</ul>
