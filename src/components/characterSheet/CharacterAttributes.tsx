@@ -1,55 +1,115 @@
 import React from "react";
 import { CharacterAttributes as CharacterAttributesModel } from "../../models/MainSheet";
+import ShieldImpact from "../svg components/ShieldImpact";
+import D20 from "../svg components/D20";
+import WisdomIcon from "../svg components/WisdomIcon";
+import BullseyeIcon from "../svg components/BullseyeIcon";
+import InspirationIcon from "../svg components/InspirationIcon";
+import SpeedIcon from "../svg components/SpeedIcon";
 
 interface CharacterAttributesProps {
 	attributes: CharacterAttributesModel;
 }
 
 const styles: { [key: string]: React.CSSProperties } = {
-	section: {
+	container: {
+		display: "flex", // Use flexbox for layout
+		flexWrap: "wrap", // Allow items to wrap into a new row
+		justifyContent: "space-between", // Space items evenly
+		gap: "10px", // Add spacing between items
 		padding: "15px",
-		marginBottom: "20px",
-		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-		borderRadius: "8px",
-		backgroundColor: "#fff",
-	},
-	heading: {
-		color: "#8b0000",
-		fontSize: "1.5rem",
-		fontWeight: "bold",
-		marginBottom: "10px",
-		textShadow: "0.5px 0.5px 1px #000",
-	},
-	list: {
-		listStyleType: "none",
-		padding: 0,
-		margin: 0,
 	},
 	listItem: {
-		marginBottom: "5px",
+		display: "flex", // Use flexbox for statName and statValue
+		justifyContent: "space-between", // Space statName and statValue evenly
+		alignItems: "center", // Align items vertically
+		padding: "8px 12px", // Smaller padding for compact items
+		backgroundColor: "#8b0000", // Dark red for a magical feel
+		color: "#f4e4c1", // Parchment-like text color
+		fontWeight: "bold",
+		fontSize: "0.9rem", // Smaller font size for compact items
+		fontFamily: "'Cinzel', serif", // Fantasy-style font
+		textAlign: "center",
+		borderRadius: "6px", // Slightly smaller rounded corners
+		boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow for depth
+		flex: "1 1 calc(33.33% - 10px)", // Take up one-third of the container width
+		boxSizing: "border-box", // Include padding and border in width calculation
+		minWidth: "120px", // Ensure a smaller minimum width for compact design
+	},
+	statName: {
+		display: "flex", // Use flexbox to align text and icon
+		alignItems: "center", // Align text and icon vertically
+		gap: "5px", // Add spacing between text and icon
 	},
 	statValue: {
-		color: "#FF4500",
+		color: "#FFD700", // Gold color for the value
 		fontWeight: "bold",
-		fontSize: "1.2rem",
+		fontSize: "1rem", // Slightly smaller font size for the value
 	},
 };
 
 const CharacterAttributes: React.FC<CharacterAttributesProps> = ({
 	attributes,
 }) => {
+	const {
+		armorClass,
+		initiative,
+		inspiration,
+		passiveWisdom,
+		proficiencyBonus,
+		speed,
+	} = attributes;
+
 	return (
-		<section style={styles.section}>
-			<h2 style={styles.heading}>Character Attributes</h2>
-			<ul style={styles.list}>
-				{Object.entries(attributes).map(([stat, value]) => (
-					<li key={stat} style={styles.listItem}>
-						<strong>{stat.charAt(0).toUpperCase() + stat.slice(1)}:</strong>{" "}
-						<span style={styles.statValue}>{value}</span>
-					</li>
-				))}
-			</ul>
-		</section>
+		<div style={styles.container}>
+			<div style={styles.listItem}>
+				<div style={styles.statName}>
+					<ShieldImpact fill="#FFD700" />
+					Armor Class
+				</div>
+				<div style={styles.statValue}>{armorClass}</div>
+			</div>
+
+			<div style={styles.listItem}>
+				<div style={styles.statName}>
+					<D20 fill="#FFD700" />
+					Initiative
+				</div>
+				<div style={styles.statValue}>{initiative}</div>
+			</div>
+
+			<div style={styles.listItem}>
+				<div style={styles.statName}>
+					<InspirationIcon fill="#FFD700" />
+					Inspiration
+				</div>
+				<div style={styles.statValue}>{inspiration}</div>
+			</div>
+
+			<div style={styles.listItem}>
+				<div style={styles.statName}>
+					<WisdomIcon fill="#FFD700" />
+					Passive Wisdom
+				</div>
+				<div style={styles.statValue}>{passiveWisdom}</div>
+			</div>
+
+			<div style={styles.listItem}>
+				<div style={styles.statName}>
+					<BullseyeIcon fill="#FFD700" />
+					Proficiency Bonus
+				</div>
+				<div style={styles.statValue}>{proficiencyBonus}</div>
+			</div>
+
+			<div style={styles.listItem}>
+				<div style={styles.statName}>
+					<SpeedIcon fill="#FFD700" />
+					Speed
+				</div>
+				<div style={styles.statValue}>{speed}</div>
+			</div>
+		</div>
 	);
 };
 

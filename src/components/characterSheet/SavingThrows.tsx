@@ -8,17 +8,18 @@ interface SavingThrowsProps {
 const styles: { [key: string]: React.CSSProperties } = {
 	section: {
 		padding: "15px",
-		marginBottom: "20px",
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
 		borderRadius: "8px",
-		backgroundColor: "#fff",
+		textAlign: "right",
+		backgroundColor: "#222222",
 	},
 	heading: {
-		color: "#8b0000",
+		color: "#FF4500",
 		fontSize: "1.5rem",
 		fontWeight: "bold",
 		marginBottom: "10px",
 		textShadow: "0.5px 0.5px 1px #000",
+		textAlign: "center",
 	},
 	list: {
 		listStyleType: "none",
@@ -26,6 +27,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 		margin: 0,
 	},
 	listItem: {
+		color: "#f4e4c1", // Parchment-like text color
 		marginBottom: "5px",
 	},
 	statValue: {
@@ -43,7 +45,9 @@ const SavingThrows: React.FC<SavingThrowsProps> = ({ throws }) => {
 				{Object.entries(throws).map(([stat, value]) => (
 					<li key={stat} style={styles.listItem}>
 						<strong>{stat.charAt(0).toUpperCase() + stat.slice(1)}:</strong>{" "}
-						<span style={styles.statValue}>{value}</span>
+						<span style={styles.statValue}>
+							{value < 0 ? `${value}` : `+${value}`}
+						</span>
 					</li>
 				))}
 			</ul>

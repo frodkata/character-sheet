@@ -3,7 +3,6 @@ import React from "react";
 const styles: React.CSSProperties = {
 	fontSize: "28px", // Font size
 	fontWeight: "bold", // Bold text
-	backgroundColor: "black", // Dark red for a magical feel
 	"--r": "1em", // Increase the cutout size for a taller ribbon
 	borderInline: "0.5em solid transparent", // Transparent border on both sides
 	padding: "1em 0.5em calc(var(--r) + 0.5em)", // Increase padding for a taller ribbon
@@ -15,7 +14,7 @@ const styles: React.CSSProperties = {
       `, // Clip path for the ribbon shape
 	background: `
         radial-gradient(50% 0.2em at top, #000a, #0000) border-box,
-        #bd1550 padding-box
+	#222222 padding-box
       `, // Background with gradient and color
 	width: 100, // Fit content width
 	display: "flex", // Use flexbox for layout

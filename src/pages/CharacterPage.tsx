@@ -17,12 +17,9 @@ const styles: { [key: string]: React.CSSProperties } = {
 		alignItems: "center",
 		padding: "20px",
 		backgroundColor: "#f9f9f9",
-		backgroundImage: `url(${backgroundImage})`,
-		backgroundSize: "cover",
-		backgroundPosition: "center",
-		backgroundRepeat: "no-repeat",
 		minHeight: "100vh",
 		boxSizing: "border-box",
+		backgroundImage: `url(${backgroundImage})`, // Add your background image path
 	},
 	ribbonContainer: {
 		display: "flex",
@@ -32,13 +29,25 @@ const styles: { [key: string]: React.CSSProperties } = {
 	},
 	grid: {
 		display: "grid",
-		gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+		gridTemplateColumns: "1fr 1fr", // Two equal columns
 		gap: "20px",
 		width: "100%",
 		maxWidth: "1200px",
 	},
-	fullWidth: {
-		gridColumn: "1 / -1",
+	leftColumn: {
+		gridColumn: "1 / 2", // Left column for SecondarySkills
+		display: "flex",
+		flexDirection: "column",
+		gap: "20px",
+	},
+	rightColumn: {
+		gridColumn: "2 / 3", // Right column for CharacterAttributes, SavingThrows, and HitPoints
+		display: "flex",
+		flexDirection: "column",
+		gap: "20px",
+	},
+	proficiencies: {
+		gridColumn: "1 / -1", // Span the entire width of the grid
 	},
 };
 
@@ -62,12 +71,19 @@ const CharacterPage: React.FC = () => {
 				<CharacterTitle title={title} />
 			</div>
 			<MainSkills mainSkills={mainSkills} />
+			<CharacterAttributes attributes={characterAtributes} />
+
 			<div style={styles.grid}>
-				<CharacterAttributes attributes={characterAtributes} />
-				<SavingThrows throws={savingThrows} />
-				<HitPoints hitPoints={hitPoints} />
-				<SecondarySkills skills={secondarySkills} />
-				<Proficiencies proficiencies={proficiencies} />
+				<div style={styles.leftColumn}>
+					<SecondarySkills skills={secondarySkills} />
+				</div>
+				<div style={styles.rightColumn}>
+					<HitPoints hitPoints={hitPoints} />
+					<SavingThrows throws={savingThrows} />
+				</div>
+				<div style={styles.proficiencies}>
+					<Proficiencies proficiencies={proficiencies} />
+				</div>
 			</div>
 		</div>
 	);

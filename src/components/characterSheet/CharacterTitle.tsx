@@ -24,7 +24,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 		fontFamily: "'Roboto', sans-serif", // Clean and modern font for details
 	},
 	label: {
-		color: "#f4e4c1", // Parchment-like text color
+		color: "#f4e4c1",
 		fontFamily: "'Cinzel', serif", // Fantasy-style font
 		fontSize: "1.5rem",
 		fontWeight: "bold",
