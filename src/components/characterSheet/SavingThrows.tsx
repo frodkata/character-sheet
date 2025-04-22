@@ -13,14 +13,13 @@ const styles: { [key: string]: React.CSSProperties } = {
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
 		borderRadius: "8px",
 		textAlign: "right",
-		backgroundColor: "#222222",
 	},
 	heading: {
-		color: "#FF4500",
+		color: "#8b0000",
 		fontSize: "1.5rem",
 		fontWeight: "bold",
 		marginBottom: "10px",
-		textShadow: "0.5px 0.5px 1px #000",
+		textShadow: "0.8px 0.5px 1px #000",
 		textAlign: "center",
 	},
 	list: {

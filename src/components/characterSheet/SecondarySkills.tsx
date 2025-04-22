@@ -7,7 +7,6 @@ interface SecondarySkillsProps {
 
 const styles: { [key: string]: React.CSSProperties } = {
 	section: {
-		backgroundColor: "#222222",
 		paddingRight: "15px",
 		paddingLeft: "15px",
 		paddingBottom: "15px",
@@ -15,11 +14,11 @@ const styles: { [key: string]: React.CSSProperties } = {
 		borderRadius: "8px",
 	},
 	heading: {
-		color: "#FF4500",
+		color: "#8b0000",
 		fontSize: "1.5rem",
 		fontWeight: "bold",
 		marginBottom: "10px",
-		textShadow: "0.5px 0.5px 1px #000",
+		textShadow: "0.8px 0.5px 1px #000",
 		textAlign: "center",
 	},
 	list: {
