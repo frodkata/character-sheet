@@ -2,6 +2,7 @@ import React from "react";
 import { CharacterSheet } from "../data/CharacterSheet";
 import Spell from "../components/Spell";
 import backgroundImage from "../assets/papyrus.jpg";
+import { Link } from "react-router-dom";
 
 const styles: { [key: string]: React.CSSProperties } = {
 	page: {
@@ -23,12 +24,27 @@ const styles: { [key: string]: React.CSSProperties } = {
 		padding: 0,
 		margin: 0,
 	},
+	link: {
+		display: "inline-block",
+		marginTop: "20px",
+		padding: "10px 20px",
+		backgroundColor: "#8b0000",
+		color: "#fff",
+		textDecoration: "none",
+		borderRadius: "8px",
+		fontWeight: "bold",
+		boxShadow: "0 2px 4px rgba(0, 0, 0, 0.3)",
+		marginRight: 10,
+	},
 };
 
 const SpellsPage: React.FC = () => {
 	const spells = CharacterSheet.spells;
 	return (
 		<div style={styles.page}>
+			<Link to="/spell-search" style={styles.link}>
+				Search for a Spell 🔍
+			</Link>
 			<h1 style={styles.header}>Spellbook</h1>
 			<ul style={styles.spellList}>
 				{spells.map((spell, index) => (

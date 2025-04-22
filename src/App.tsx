@@ -38,7 +38,7 @@ function App() {
 						<ul style={styles.navList}>
 							<li>
 								<Link
-									to="/"
+									to="/character"
 									style={styles.navItem}
 									onMouseOver={(e) => (e.currentTarget.style.color = "#fff")}
 									onMouseOut={(e) => (e.currentTarget.style.color = "#f4e4c1")}
