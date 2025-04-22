@@ -1,19 +1,21 @@
 import React from "react";
 import { CharacterSheet } from "../data/CharacterSheet";
 import Spell from "../components/Spell";
+import backgroundImage from "../assets/papyrus.jpg";
 
 const styles: { [key: string]: React.CSSProperties } = {
 	page: {
 		padding: "20px",
-		fontFamily: "'Cinzel', serif", // Fantasy-style font
-		color: "#3e2a1c", // Dark brown text
-		minHeight: "100vh", // Full-page height
+		fontFamily: "'Cinzel', serif",
+		color: "#3e2a1c",
+		minHeight: "100vh",
+		backgroundImage: `url(${backgroundImage})`,
 	},
 	header: {
 		textAlign: "center",
-		color: "#8b0000", // Dark red for a magical feel
+		color: "#8b0000",
 		fontSize: "2.5rem",
-		textShadow: "1px 1px 2px #000", // Subtle shadow for depth
+		textShadow: "1px 1px 2px #000",
 		marginBottom: "20px",
 	},
 	spellList: {

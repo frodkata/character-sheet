@@ -19,7 +19,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 		backgroundColor: "#f9f9f9",
 		minHeight: "100vh",
 		boxSizing: "border-box",
-		backgroundImage: `url(${backgroundImage})`, // Add your background image path
+		backgroundImage: `url(${backgroundImage})`,
 	},
 	ribbonContainer: {
 		display: "flex",
@@ -29,25 +29,25 @@ const styles: { [key: string]: React.CSSProperties } = {
 	},
 	grid: {
 		display: "grid",
-		gridTemplateColumns: "1fr 1fr", // Two equal columns
+		gridTemplateColumns: "1fr 1fr",
 		gap: "20px",
 		width: "100%",
 		maxWidth: "1200px",
 	},
 	leftColumn: {
-		gridColumn: "1 / 2", // Left column for SecondarySkills
+		gridColumn: "1 / 2",
 		display: "flex",
 		flexDirection: "column",
 		gap: "20px",
 	},
 	rightColumn: {
-		gridColumn: "2 / 3", // Right column for CharacterAttributes, SavingThrows, and HitPoints
+		gridColumn: "2 / 3",
 		display: "flex",
 		flexDirection: "column",
 		gap: "20px",
 	},
 	proficiencies: {
-		gridColumn: "1 / -1", // Span the entire width of the grid
+		gridColumn: "1 / -1",
 	},
 };
 
