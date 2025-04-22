@@ -9,6 +9,7 @@ import SecondarySkills from "../components/characterSheet/SecondarySkills";
 import Proficiencies from "../components/characterSheet/Proficiencies";
 import CharacterTitle from "../components/characterSheet/CharacterTitle";
 import backgroundImage from "../assets/papyrus.jpg";
+import Feats from "../components/characterSheet/Feats";
 
 const styles: { [key: string]: React.CSSProperties } = {
 	container: {
@@ -60,6 +61,7 @@ const CharacterPage: React.FC = () => {
 		secondarySkills,
 		proficiencies,
 		characterAtributes,
+		feats,
 	} = CharacterSheet;
 
 	return (
@@ -80,6 +82,7 @@ const CharacterPage: React.FC = () => {
 				<div style={styles.rightColumn}>
 					<HitPoints hitPoints={hitPoints} />
 					<SavingThrows throws={savingThrows} />
+					<Feats feats={feats} />
 				</div>
 				<div style={styles.proficiencies}>
 					<Proficiencies proficiencies={proficiencies} />

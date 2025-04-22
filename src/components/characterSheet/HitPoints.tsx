@@ -8,7 +8,7 @@ interface HitPointsProps {
 
 const styles: { [key: string]: React.CSSProperties } = {
 	section: {
-		padding: "15px",
+		padding: "10px",
 		marginBottom: "5px",
 		textAlign: "center",
 		color: "#8b0000",
@@ -23,26 +23,27 @@ const styles: { [key: string]: React.CSSProperties } = {
 		fontSize: "1.2rem",
 		fontFamily: "'Cinzel', serif", // Fantasy-style font
 	},
+	currentHp: {
+		color: "#555", // Darker font color
+		fontSize: "1rem", // Smaller font size
+		fontWeight: "normal",
+	},
 };
 
 const HitPoints: React.FC<HitPointsProps> = ({ hitPoints }) => {
 	return (
 		<section style={styles.section}>
+			<strong>Max HP:</strong>
+			<span style={styles.statValue}>
+				{hitPoints.maxHitPoints} <HealthPotionIcon fill="#8b0000" />
+			</span>
+			<br />
+			<span style={styles.currentHp}>
+				<strong>Current HP:</strong> {hitPoints.currentHitPoints}
+			</span>
 			<p>
-				<strong>Current HP:</strong>
-				<span style={styles.statValue}>
-					{hitPoints.currentHitPoints} <HealthPotionIcon fill="#8b0000" />
-				</span>
-			</p>
-			<p>
-				<strong>Max HP:</strong>
-				<span style={styles.statValue}>
-					{hitPoints.maxHitPoints} <HealthPotionIcon fill="#8b0000" />{" "}
-				</span>
-			</p>
-			<p>
-				<strong>Hit Dice:</strong>
-				<span style={styles.statValue}>{hitPoints.hitDice}</span>
+				<strong>Hit Dice: </strong>
+				<span style={styles.statValue}> {hitPoints.hitDice}</span>
 			</p>
 		</section>
 	);
