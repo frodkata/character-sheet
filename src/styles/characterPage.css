@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url("../assets/papyrus.jpg");
+  }
+  
+  .ribbon-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .left-column {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .right-column {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .proficiencies {
+    grid-column: 1 / -1;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr; /* Switch to a single column */
+    }
+  
+    .left-column,
+    .right-column {
+      grid-column: 1 / -1;
+    }
+  }
