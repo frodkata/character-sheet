@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { HashRouter, Link } from "react-router-dom";
 import AppRoutes from "./AppRoutes";
 
 const styles: { [key: string]: React.CSSProperties } = {
@@ -31,7 +31,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 
 function App() {
 	return (
-		<Router>
+		<HashRouter>
 			<div className="App">
 				<header className="App-header">
 					<nav style={styles.nav}>
@@ -73,7 +73,7 @@ function App() {
 					<AppRoutes />
 				</main>
 			</div>
-		</Router>
+		</HashRouter>
 	);
 }
 
