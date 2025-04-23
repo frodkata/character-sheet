@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/character-sheet/static/css/main.cb223f05.css",
-    "main.js": "/character-sheet/static/js/main.badde250.js",
+    "main.js": "/character-sheet/static/js/main.d8c8e3ce.js",
     "static/media/papyrus.jpg": "/character-sheet/static/media/papyrus.0a916fc921e7f8169fc1.jpg",
     "index.html": "/character-sheet/index.html",
     "main.cb223f05.css.map": "/character-sheet/static/css/main.cb223f05.css.map",
-    "main.badde250.js.map": "/character-sheet/static/js/main.badde250.js.map"
+    "main.d8c8e3ce.js.map": "/character-sheet/static/js/main.d8c8e3ce.js.map"
   },
   "entrypoints": [
     "static/css/main.cb223f05.css",
-    "static/js/main.badde250.js"
+    "static/js/main.d8c8e3ce.js"
   ]
 }
