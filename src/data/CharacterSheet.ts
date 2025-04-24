@@ -241,8 +241,8 @@ export const CharacterSheet: Sheet = {
 		transformSpellData("Haste"),
 		transformSpellData("Leomund's Tiny Hut"),
 		transformSpellData("Hypnotic Pattern"),
-		transformSpellData("Fly"),
 		transformSpellData("Polymorph"),
 		transformSpellData("Storm Sphere"),
+		transformSpellData("Dimension Door"),
 	],
 };
