@@ -10,6 +10,7 @@ import Proficiencies from "../components/characterSheet/Proficiencies";
 import CharacterTitle from "../components/characterSheet/CharacterTitle";
 import Feats from "../components/characterSheet/Feats";
 import "../styles/characterPage.css";
+import Tips from "../components/characterSheet/Tips";
 
 const CharacterPage: React.FC = () => {
 	const {
@@ -43,9 +44,18 @@ const CharacterPage: React.FC = () => {
 					<SavingThrows throws={savingThrows} />
 					<Feats feats={feats} />
 				</div>
+
 				<div className="proficiencies">
 					<Proficiencies proficiencies={proficiencies} />
 				</div>
+			</div>
+
+			<div className="full-width">
+				<Tips
+					intelligenceModifier={mainSkills.intelligence[1]}
+					characterLevel={title.level}
+					proficiency={characterAtributes.proficiencyBonus}
+				/>
 			</div>
 		</div>
 	);
