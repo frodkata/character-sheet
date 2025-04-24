@@ -60,6 +60,7 @@ const SpellSearchPage: React.FC = () => {
 						duration={spell.duration}
 						description={spell.description}
 						higherLevel={spell.higherLevel}
+						concentration={spell.concentration}
 					/>
 				))}
 			</ul>

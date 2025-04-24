@@ -15,6 +15,7 @@ export const transformSpellData = (spellName: string): Spell => {
 		name: spell?.name || "",
 		range: spell?.range || "",
 		school: spell?.school || "",
+		concentration: spell?.concentration || "No",
 	};
 };
 

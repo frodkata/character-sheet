@@ -56,6 +56,7 @@ interface SpellProps {
 	components: string;
 	duration: string;
 	description: string;
+	concentration: string;
 	higherLevel?: string;
 }
 
@@ -69,6 +70,7 @@ const Spell: React.FC<SpellProps> = ({
 	duration,
 	description,
 	higherLevel,
+	concentration,
 }) => {
 	return (
 		<li style={styles.container}>
@@ -92,6 +94,9 @@ const Spell: React.FC<SpellProps> = ({
 			</p>
 			<p style={styles.text}>
 				<strong>Duration:</strong> {duration}
+			</p>
+			<p style={styles.text}>
+				<strong>Concentration:</strong> {concentration}
 			</p>
 			<div
 				style={styles.description}

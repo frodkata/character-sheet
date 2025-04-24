@@ -58,6 +58,7 @@ const SpellsPage: React.FC = () => {
 						components={spell.components}
 						duration={spell.duration}
 						school={spell.school}
+						concentration={spell.concentration}
 					/>
 				))}
 			</ul>

@@ -7,5 +7,6 @@ export interface Spell {
 	components: string;
 	duration: string;
 	description: string;
+	concentration: string;
 	higherLevel?: string;
 }
