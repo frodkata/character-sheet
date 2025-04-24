@@ -19,11 +19,11 @@ const styles: { [key: string]: React.CSSProperties } = {
 		textAlign: "center",
 	},
 	ribbonContainer: {
-		display: "flex", // Arrange RibbonSkill components in a row
-		justifyContent: "space-around", // Space them evenly
-		alignItems: "center", // Align them vertically
-		flexWrap: "wrap", // Allow wrapping on smaller screens
-		gap: "10px", // Add spacing between ribbons
+		display: "flex",
+		justifyContent: "space-around",
+		alignItems: "center",
+		flexWrap: "wrap",
+		gap: "10px",
 	},
 };
 

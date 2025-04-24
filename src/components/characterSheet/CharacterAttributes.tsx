@@ -13,38 +13,38 @@ interface CharacterAttributesProps {
 
 const styles: { [key: string]: React.CSSProperties } = {
 	container: {
-		display: "flex", // Use flexbox for layout
-		flexWrap: "wrap", // Allow items to wrap into a new row
-		justifyContent: "space-between", // Space items evenly
-		gap: "10px", // Add spacing between items
+		display: "flex",
+		flexWrap: "wrap",
+		justifyContent: "space-between",
+		gap: "10px",
 		padding: "15px",
 	},
 	listItem: {
-		display: "flex", // Use flexbox for statName and statValue
-		justifyContent: "space-between", // Space statName and statValue evenly
-		alignItems: "center", // Align items vertically
-		padding: "8px 12px", // Smaller padding for compact items
+		display: "flex",
+		justifyContent: "space-between",
+		alignItems: "center",
+		padding: "8px 12px",
 		backgroundColor: "#8b0000", // Dark red for a magical feel
 		color: "#f4e4c1", // Parchment-like text color
 		fontWeight: "bold",
-		fontSize: "0.9rem", // Smaller font size for compact items
-		fontFamily: "'Cinzel', serif", // Fantasy-style font
+		fontSize: "0.9rem",
+		fontFamily: "'Cinzel', serif",
 		textAlign: "center",
-		borderRadius: "6px", // Slightly smaller rounded corners
-		boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow for depth
-		flex: "1 1 calc(33.33% - 10px)", // Take up one-third of the container width
-		boxSizing: "border-box", // Include padding and border in width calculation
-		minWidth: "120px", // Ensure a smaller minimum width for compact design
+		borderRadius: "6px",
+		boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+		flex: "1 1 calc(33.33% - 10px)",
+		boxSizing: "border-box",
+		minWidth: "120px",
 	},
 	statName: {
-		display: "flex", // Use flexbox to align text and icon
-		alignItems: "center", // Align text and icon vertically
-		gap: "5px", // Add spacing between text and icon
+		display: "flex",
+		alignItems: "center",
+		gap: "5px",
 	},
 	statValue: {
 		color: "#FFD700", // Gold color for the value
 		fontWeight: "bold",
-		fontSize: "1rem", // Slightly smaller font size for the value
+		fontSize: "1rem",
 	},
 };
 

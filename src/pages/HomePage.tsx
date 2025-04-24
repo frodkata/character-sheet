@@ -8,15 +8,15 @@ const styles: { [key: string]: React.CSSProperties } = {
 		flexDirection: "column",
 		alignItems: "center",
 		justifyContent: "center",
-		position: "relative", // Allows positioning of the link
+		position: "relative",
 		padding: "20px",
 		fontFamily: "'Cinzel', serif",
-		backgroundColor: "#8b0000", // Red background color
+		backgroundColor: "#8b0000",
 		minHeight: "100vh",
 	},
 	link: {
-		position: "absolute", // Position the link above the D20
-		top: "10%", // Move it to the top part of the page
+		position: "absolute",
+		top: "10%",
 		textAlign: "center",
 		padding: "10px 20px",
 		backgroundColor: "#8b0000",

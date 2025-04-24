@@ -14,20 +14,20 @@ const styles: { [key: string]: React.CSSProperties } = {
 	},
 	category: {
 		display: "flex",
-		flexWrap: "wrap", // Allow wrapping on smaller screens
-		gap: "10px", // Add spacing between items
+		flexWrap: "wrap",
+		gap: "10px",
 	},
 	item: {
 		padding: "8px",
 		borderRadius: "6px",
-		backgroundColor: "#222222", // Light gray background for items
-		boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow for depth
+		backgroundColor: "#222222", // Light gray
+		boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
 		fontSize: "1rem",
-		color: "#FFD700", // Gold color for the modifier
+		color: "#FFD700", // Gold color
 		fontWeight: "bold",
 		textAlign: "center",
-		minWidth: "100px", // Ensure consistent size for items
-		fontFamily: "'Cinzel', serif", // Fantasy-style font
+		minWidth: "100px",
+		fontFamily: "'Cinzel', serif",
 	},
 	heading: {
 		color: "#8b0000",

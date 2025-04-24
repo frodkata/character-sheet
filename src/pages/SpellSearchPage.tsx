@@ -14,8 +14,8 @@ const styles: { [key: string]: React.CSSProperties } = {
 		minHeight: "100vh",
 	},
 	searchBar: {
-		width: "50%", // Contain the search bar to 50% of the page width
-		maxWidth: "400px", // Set a maximum width for larger screens
+		width: "50%",
+		maxWidth: "400px",
 		padding: "10px",
 		marginBottom: "20px",
 		fontSize: "1rem",

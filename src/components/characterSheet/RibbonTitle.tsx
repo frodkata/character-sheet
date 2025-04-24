@@ -4,12 +4,12 @@ const styles: React.CSSProperties = {
 	fontSize: "1.5rem",
 	fontWeight: "bold",
 	textAlign: "center",
-	fontFamily: "'Cinzel', serif", // Fantasy-style font
+	fontFamily: "'Cinzel', serif",
 	color: "#f4e4c1", // Parchment-like text color
-	textShadow: "1px 1px 2px #000", // Subtle shadow for readability
-	"--s": "2.5em", // the ribbon size
-	"--d": "0.8em", // the depth
-	"--c": "0.8em", // the cutout part
+	textShadow: "1px 1px 2px #000",
+	"--s": "2.5em", // size
+	"--d": "0.8em", // depth
+	"--c": "0.8em", // cutout part
 	padding: "0 calc(var(--s) + 0.5em) var(--d)",
 	lineHeight: "2.8",
 	background: `
@@ -25,8 +25,8 @@ const styles: React.CSSProperties = {
       0 100%, var(--c) calc(50% + var(--d) / 2)
     )
   `,
-	backgroundColor: "#CC333F", // the main color
-	margin: "0 auto", // Center the ribbon horizontally
+	backgroundColor: "#CC333F",
+	margin: "0 auto",
 } as React.CSSProperties;
 
 interface RibbonTitleProps {

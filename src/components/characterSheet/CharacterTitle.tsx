@@ -12,20 +12,20 @@ const styles: { [key: string]: React.CSSProperties } = {
 		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
 		borderRadius: "8px",
 		backgroundColor: "#8b0000", // Dark red for a magical feel
-		display: "flex", // Use flexbox for horizontal alignment
-		justifyContent: "space-around", // Space out the items evenly
-		alignItems: "center", // Align items vertically in the center
+		display: "flex",
+		justifyContent: "space-around",
+		alignItems: "center",
 		textAlign: "center",
-		gap: "10px", // Add spacing between items
-		flexWrap: "wrap", // Allow wrapping on smaller screens
+		gap: "10px",
+		flexWrap: "wrap",
 	},
 	item: {
-		fontSize: "1.2rem", // Slightly larger font for details
-		fontFamily: "'Roboto', sans-serif", // Clean and modern font for details
+		fontSize: "1.2rem",
+		fontFamily: "'Roboto', sans-serif",
 	},
 	label: {
 		color: "#f4e4c1",
-		fontFamily: "'Cinzel', serif", // Fantasy-style font
+		fontFamily: "'Cinzel', serif",
 		fontSize: "1.5rem",
 		fontWeight: "bold",
 		marginBottom: "10px",

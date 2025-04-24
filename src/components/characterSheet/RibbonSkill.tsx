@@ -1,39 +1,39 @@
 import React from "react";
 
 const styles: React.CSSProperties = {
-	fontSize: "28px", // Font size
-	fontWeight: "bold", // Bold text
-	"--r": "1em", // Increase the cutout size for a taller ribbon
-	borderInline: "0.5em solid transparent", // Transparent border on both sides
-	padding: "1em 0.5em calc(var(--r) + 0.5em)", // Increase padding for a taller ribbon
+	fontSize: "28px",
+	fontWeight: "bold",
+	"--r": "1em",
+	borderInline: "0.5em solid transparent",
+	padding: "1em 0.5em calc(var(--r) + 0.5em)",
 	clipPath: `
         polygon(
           0 0, 100% 0, 100% 100%, calc(100% - 0.5em) calc(100% - var(--r)), 
           50% 100%, 0.5em calc(100% - var(--r)), 0 100%
         )
-      `, // Clip path for the ribbon shape
+      `,
 	background: `
         radial-gradient(50% 0.2em at top, #000a, #0000) border-box,
 	#222222 padding-box
-      `, // Background with gradient and color
-	width: 100, // Fit content width
-	display: "flex", // Use flexbox for layout
-	flexDirection: "column", // Arrange content in a column
-	justifyContent: "center", // Center content vertically
-	alignItems: "center", // Center content horizontally
-	gap: "5px", // Add spacing between items
+      `,
+	width: 100,
+	display: "flex",
+	flexDirection: "column",
+	justifyContent: "center",
+	alignItems: "center",
+	gap: "5px",
 } as React.CSSProperties;
 
 const textStyles: React.CSSProperties = {
 	fontWeight: "bold",
-	fontSize: "1.0rem", // Smaller font size for details
-	color: "#f4e4c1", // Dark red for a magical feel
-	fontFamily: "'Cinzel', serif", // Fantasy-style font
+	fontSize: "1.0rem",
+	color: "#f4e4c1", // Dark red
+	fontFamily: "'Cinzel', serif",
 };
 
 const modifierStyles: React.CSSProperties = {
-	fontSize: "1.5rem", // Slightly larger font for the modifier
-	color: "#FFD700", // Gold color for the modifier
+	fontSize: "1.5rem",
+	color: "#FFD700", // Gold color
 	fontWeight: "bold",
 	marginTop: 20,
 };

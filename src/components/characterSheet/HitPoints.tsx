@@ -12,20 +12,20 @@ const styles: { [key: string]: React.CSSProperties } = {
 		marginBottom: "5px",
 		textAlign: "center",
 		color: "#8b0000",
-		fontFamily: "'Cinzel', serif", // Fantasy-style font
+		fontFamily: "'Cinzel', serif",
 		fontSize: "1.2rem",
 		fontWeight: "bold",
-		textShadow: "1px 1px 2px #000", // Subtle shadow for readability
+		textShadow: "1px 1px 2px #000",
 	},
 	statValue: {
 		color: "#8b0000",
 		fontWeight: "bold",
 		fontSize: "1.2rem",
-		fontFamily: "'Cinzel', serif", // Fantasy-style font
+		fontFamily: "'Cinzel', serif",
 	},
 	currentHp: {
-		color: "#555", // Darker font color
-		fontSize: "1rem", // Smaller font size
+		color: "#555",
+		fontSize: "1rem",
 		fontWeight: "normal",
 	},
 };

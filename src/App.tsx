@@ -6,7 +6,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 	nav: {
 		backgroundColor: "#8b0000", // Dark red for a magical feel
 		padding: "10px 20px",
-		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Subtle shadow for depth
+		boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
 	},
 	navList: {
 		listStyleType: "none",
@@ -19,13 +19,13 @@ const styles: { [key: string]: React.CSSProperties } = {
 	navItem: {
 		textDecoration: "none",
 		color: "#f4e4c1", // Parchment-like text color
-		fontFamily: "'Cinzel', serif", // Fantasy-style font
+		fontFamily: "'Cinzel', serif",
 		fontSize: "1.2rem",
 		fontWeight: "bold",
-		textShadow: "1px 1px 2px #000", // Subtle shadow for readability
+		textShadow: "1px 1px 2px #000",
 	},
 	navItemHover: {
-		color: "#fff", // Brighter text on hover
+		color: "#fff",
 	},
 };
 

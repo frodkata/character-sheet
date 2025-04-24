@@ -29,7 +29,7 @@ const styles: { [key: string]: React.CSSProperties } = {
 	listItem: {
 		color: "#f4e4c1",
 		marginBottom: "5px",
-		backgroundColor: "#333333", // Darker background for list items
+		backgroundColor: "#333333",
 		borderRadius: "10px",
 		padding: "10px",
 	},
