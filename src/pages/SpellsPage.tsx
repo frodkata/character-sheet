@@ -107,6 +107,7 @@ const SpellsPage: React.FC = () => {
 			<span style={styles.tip}>
 				[ITEM] +2 Spell Save DC for Enchantment & Illusion spells
 				<span style={{ color: "#FFA500" }}> [Phantasmal Killer]</span>
+				<span style={{ color: "#FFA500" }}> [Hypnotic Pattern]</span>
 			</span>
 			{/* Spell List */}
 			<ul style={styles.spellList}>
