@@ -115,6 +115,11 @@ export const CharacterSheet: Sheet = {
 			description:
 				"When you cast a Divination spell of 2nd level or higher, you regain a spell slot of a lower level than the spell you just cast.",
 		},
+		{
+			name: "Lucky",
+			description:
+				"The Lucky feat gives you 3 luck points per long rest. You can spend a point to roll an extra d20 and choose which die to use for: Your attack roll, ability check, or saving throw or an enemy's attack roll against you",
+		},
 	],
 	inventory: {
 		gold: 304,
@@ -235,6 +240,8 @@ export const CharacterSheet: Sheet = {
 		transformSpellData("Haste"),
 		transformSpellData("Leomund's Tiny Hut"),
 		transformSpellData("Hypnotic Pattern"),
+		transformSpellData("Fly"),
 		transformSpellData("Polymorph"),
+		transformSpellData("Storm Sphere"),
 	],
 };
