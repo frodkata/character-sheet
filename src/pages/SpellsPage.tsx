@@ -70,10 +70,9 @@ const styles: { [key: string]: React.CSSProperties } = {
 		marginRight: 10,
 	},
 	tip: {
-		textAlign: "center",
-		color: "#8b0000",
-		fontSize: "2.5rem",
-		textShadow: "1px 1px 2px #000",
+		color: "#222222",
+		fontSize: "1.0rem",
+		textShadow: "1px 1px 1px #000",
 		marginBottom: "20px",
 	},
 };
@@ -105,7 +104,10 @@ const SpellsPage: React.FC = () => {
 				))}
 			</div>
 
-			<span style={styles.tip}>+2</span>
+			<span style={styles.tip}>
+				[ITEM] +2 Spell Save DC for Enchantment & Illusion spells
+				<span style={{ color: "#FFA500" }}> [Phantasmal Killer]</span>
+			</span>
 			{/* Spell List */}
 			<ul style={styles.spellList}>
 				{spells.map((spell, index) => (
