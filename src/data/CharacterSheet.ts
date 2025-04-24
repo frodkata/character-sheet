@@ -242,7 +242,7 @@ export const CharacterSheet: Sheet = {
 		transformSpellData("Leomund's Tiny Hut"),
 		transformSpellData("Hypnotic Pattern"),
 		transformSpellData("Polymorph"),
-		transformSpellData("Storm Sphere"),
+		transformSpellData("Phantasmal Killer"),
 		transformSpellData("Dimension Door"),
 	],
 };
