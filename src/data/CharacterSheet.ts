@@ -243,6 +243,6 @@ export const CharacterSheet: Sheet = {
 		transformSpellData("Hypnotic Pattern"),
 		transformSpellData("Polymorph"),
 		transformSpellData("Phantasmal Killer"),
-		transformSpellData("Dimension Door"),
+		transformSpellData("Banishment"),
 	],
 };
